@@ -3,6 +3,7 @@
 
 ### Install
 
+- `npm install typings -g`
 - `npm install`
 - `npm run dev`
 
