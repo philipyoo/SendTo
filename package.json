@@ -1,7 +1,7 @@
 {
-  "name": "your-project",
+  "name": "SendTo",
   "version": "0.0.1",
-  "description": "Your Project Description",
+  "description": "Creating a TO line for a mail application using Angular 2",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.8",
     "copy-webpack-plugin": "^1.1.1",
@@ -23,7 +23,8 @@
   "scripts": {
     "webpack-dev-server": "NODE_ENV=development webpack-dev-server",
     "build": "NODE_ENV=production webpack",
-    "typings": "typings"
+    "typings": "typings",
+    "start": "npm run webpack-dev-server"
   },
   "dependencies": {
     "angular2": "2.0.0-beta.6",
