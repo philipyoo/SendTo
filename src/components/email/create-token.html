@@ -1,3 +1,3 @@
 <span class="tokenize">
-    {{contact}} <i class="material-icons" (click)="removeContact(contact)">close</i>
+    {{contact?.name || contact}} <i class="material-icons" (click)="removeContact(contact)">close</i>
 </span>
