@@ -26,7 +26,8 @@
                         <add-contact (inputChange)="searchContact = $event.value"></add-contact>
                     </div>
                     <!--Hidden list of contacts-->
-                    <div [hidden]="searchContact?.length <= 0" class="search-contact">
+                    <!--[hidden]="searchContact?.length <= 0"-->
+                    <div *ngIf="searchContact?.length > 0" class="search-contact">
                         <add-hidden-contact [searchContact]="searchContact"
                                             [contacts]="contacts"></add-hidden-contact>
                     </div>
