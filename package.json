@@ -1,7 +1,7 @@
 {
   "name": "SendTo",
   "version": "0.0.1",
-  "description": "Creating a TO line for a mail application using Angular 2",
+  "description": "Creating a TO line from a mail applica",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.8",
     "copy-webpack-plugin": "^1.1.1",

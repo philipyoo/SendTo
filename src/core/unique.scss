@@ -1,0 +1,144 @@
+
+body {
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+table {
+  cellpadding: 0;
+}
+
+.email-container {
+  width: 501px;
+  height: 558px;
+
+  table {
+    width: 100%;
+  }
+}
+
+.header-container {
+  background-color: #404040;
+  color: white;
+  padding: 4px 0 0 4px;
+
+  .header-main {
+
+  }
+
+  .header-title {
+    width: 412px;
+  }
+
+  .header-options {
+    width: 60px;
+    text-align: right;
+    white-space: nowrap;
+  }
+}
+
+.body-container {
+  padding: 0 5px;
+
+
+  tr {
+    width: 100%;
+
+    td {
+      width: 500px;
+      overflow: hidden;
+
+      .email-label {
+        width: 100px;
+      }
+
+      input {
+        width: 100%;
+        padding: 0;
+      }
+
+    }
+
+    .something {
+      width: 40px;
+      vertical-align: top;
+    }
+
+    .carbon-copy {
+      float: right;
+    }
+  }
+
+}
+
+input {
+  //border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.container-height {
+  height: calc(100vh - 100px);
+  overflow: auto;
+}
+
+span {
+  width: 350px;
+}
+
+.search-contact {
+  background-color: white;
+  position: absolute;
+  width: 325px;
+  border: 1px solid gray;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 0 5px;
+      height: 50px;
+    }
+  }
+}
+
+li:hover {
+  background-color: grey;
+}
+
+.to-container {
+  position: relative;
+
+  cursor: text;
+  display: block;
+
+}
+
+.token-field {
+  color: #39739d;
+  font-size: 12px;
+  background: #E1ECF4;
+  border: 1px solid black;
+  display: inline-block;
+  border-radius: 0;
+  transition: color 0.15s ease, background 0.15s ease, border 0.15s ease;
+
+  padding: .4em .5em;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1;
+  width: auto;
+}
+
+.to-wrap {
+  border: 1px solid #d9d9d9;
+  cursor: default;
+  display: block;
+  height: 20px;
+  white-space: nowrap;
+  border-radius: 3px;
+}
