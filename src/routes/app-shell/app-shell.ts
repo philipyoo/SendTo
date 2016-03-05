@@ -1,7 +1,8 @@
 import {Component, OnInit} from "angular2/core";
-import {EmailComponent} from '../../components/email/email';
-import {ContactDetailComponent} from '../../components/contact/contact-detail';
+
 import {Contact} from '../../components/contact/contact';
+import {ContactDetailComponent} from '../../components/contact/contact-detail';
+import {EmailComponent} from '../../components/email/email';
 import {ContactService} from '../../components/contact/contact.service';
 
 @Component({

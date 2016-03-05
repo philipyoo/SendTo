@@ -15,7 +15,6 @@ export class AddHiddenContactComponent {
     
     checkList(inputValue: string, contact: Contact) {
         var re = new RegExp("^" + inputValue, 'i');
-        // parse name into first and last name
         return re.test(contact.name);
     }
 
@@ -25,5 +24,4 @@ export class AddHiddenContactComponent {
         this._toListService.addContact({name: contact.name, email: contact.email});
         this.emptyInputField.emit(true);
     }
-
 }
