@@ -23,7 +23,7 @@ export class AddHiddenContactComponent {
     constructor(private _toListService: ToListService) {}
 
     addSelected(contact: Contact) {
-        this._toListService.addContact(contact);
+        this._toListService.addContact({name: contact.name, email: contact.email});
         this.emptyInputField.emit(true);
     }
 

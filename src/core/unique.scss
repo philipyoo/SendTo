@@ -119,10 +119,9 @@ li:hover {
 }
 
 .token-field {
-  color: #39739d;
   font-size: 12px;
-  background: #E1ECF4;
-  border: 1px solid black;
+  background: #ccc;
+  border: 1px solid #777;
   display: inline-block;
   border-radius: 0;
   transition: color 0.15s ease, background 0.15s ease, border 0.15s ease;
@@ -141,4 +140,21 @@ li:hover {
   height: 20px;
   white-space: nowrap;
   border-radius: 3px;
+}
+
+.tokenize {
+  cursor: pointer;
+
+  .material-icons {
+    font-size: 12px;
+
+    &:hover {
+      color: white;
+      //background-color: black;
+    }
+  }
+}
+
+.token-button {
+
 }

@@ -1,5 +1,6 @@
 import {Injectable} from 'angular2/core';
 import {addedContacts} from './all-added-contacts';
+import {Contact} from '../contact/contact';
 
 @Injectable()
 export class ToListService {
@@ -12,8 +13,8 @@ export class ToListService {
         console.log(addedContacts);
     }
     
-    removeContact(index: number) {
-        addedContacts.splice(index, 1);
+    removeContact(contact: any) {
+        addedContacts.splice(addedContacts.indexOf(contact), 1);
         console.log(addedContacts);
     }
 }

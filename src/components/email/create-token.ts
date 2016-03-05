@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core';
+import {ToListService} from './to-list.service';
 
 @Component({
     selector: 'create-token',
@@ -6,5 +7,9 @@ import {Component} from 'angular2/core';
     inputs: ['contact']
 })
 export class CreateTokenComponent {
-    // does contact exist in contact list?
+    constructor(private _toListService: ToListService) {}
+    
+    removeContact(contact: any) {
+        this._toListService.removeContact(contact);
+    }
 }

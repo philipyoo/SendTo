@@ -7,7 +7,7 @@
                     New Message
                 </td>
                 <td class="header-options">
-                     X
+                    <i class="material-icons">close</i>
                 </td>
             </tr>
         </div>
@@ -19,12 +19,11 @@
                 <td>
                     <!--Token div-->
                     <div class="to-container">
-                        <add-contact (inputChange)="searchContact = $event.value" [emptyIt]="emptyIt"></add-contact>
+                        <add-contact (inputChange)="searchContact = $event.value"></add-contact>
                     </div>
                     <!--Hidden list of contacts-->
                     <div [hidden]="searchContact?.length <= 0" class="search-contact">
-                        {{searchContact}}
-                        <add-hidden-contact [searchContact]="searchContact" [contacts]="contacts" (emptyInputField)="emptyIt = $event"></add-hidden-contact>
+                        <add-hidden-contact [searchContact]="searchContact" [contacts]="contacts"></add-hidden-contact>
                         <!--<add-hidden-contact [contacts]="contacts"-->
                                             <!--[searchContact]="searchContact"></add-hidden-contact>-->
                     </div>
