@@ -1,0 +1,8 @@
+<ul class="demo-list-item mdl-list">
+    <template ngFor #contact [ngForOf]="contacts">
+        <li class="mdl-list__item mdl-list__item--two-line"
+            *ngIf="checkList(searchContact, contact) == true">
+            <contact-detail [contact]="contact" (click)="addTo(contact)"></contact-detail>
+        </li>
+    </template>
+</ul>
