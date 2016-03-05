@@ -1,0 +1,48 @@
+<div class="email-container">
+    <table>
+        <tbody>
+        <div class="header-container">
+            <tr id="header-main">
+                <td class="header-title">
+                    New Message
+                </td>
+                <td class="header-options">
+                    X | X | X
+                </td>
+            </tr>
+        </div>
+        <div class="body-container">
+            <tr id="body-main">
+                <td class="something">
+                    <span class="email-label">To</span>
+                </td>
+                <td>
+                    <!--Token div-->
+                    <div class="to-container">
+                        <add-contact (inputChange)="searchContact = $event.value"
+                                     (addInputContact)="addInputContact($event)"
+                                     [addedContacts]="addedContacts"></add-contact>
+                    </div>
+                    <div [hidden]="searchContact?.length <= 0" class="search-contact">
+                        <!--Hidden list of contacts-->
+                        <add-hidden-contact [contacts]="contacts"
+                                            [searchContact]="searchContact"
+                                            (selectedContact)="addSelectedContact($event)"></add-hidden-contact>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="something">
+                    <span class="email-label">From</span>
+                </td>
+                <td>
+                    <input type="text">
+                    <div class="carbon-copy">
+                        <span>Cc</span> <span>Bcc</span>
+                    </div>
+                </td>
+            </tr>
+        </div>
+        </tbody>
+    </table>
+</div>
