@@ -1,12 +1,12 @@
 <div class="">
-    <span class="token-field" *ngFor="#contact of addedContacts">
+    <span class="token-field" *ngFor="#contact of allAddedContacts">
         <create-token [contact]="contact"></create-token>
     </span>
 </div>
 <input type="text" #searchContact
        (keyup)="0"
-       (keyup.enter)="addContact(searchContact.value)"
-       (keyup.enter)="searchContact.value = ''"
+       (keyup.enter)="enterContact(searchContact.value); searchContact.value = ''"
        [(ngModel)]="searchContact.value"
        (ngModelChange)="inputChange.emit(searchContact)"
        >
+<!--<template *ngIf="emptyIt == true ? searchContact.value = '' : emptyIt = false;"></template>-->

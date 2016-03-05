@@ -1,25 +1,24 @@
 import {Component, Input} from 'angular2/core';
-import {Contact} from '../contact/contact';
 import {AddContactComponent} from './add-contact';
 import {AddHiddenContactComponent} from './add-hidden-contact';
+import {ToListService} from './to-list.service'
 
 @Component({
     selector: 'email',
     template: require('./email.html'),
     inputs: ['contacts'],
-    directives: [AddContactComponent, AddHiddenContactComponent]
+    directives: [AddContactComponent, AddHiddenContactComponent],
+    providers: [ToListService]
 })
 
 export class EmailComponent {
-    addedContacts:any[] = [];
-    @Input() inputChange
-    
-    addSelectedContact(contact: Contact) {
-        this.addedContacts.push(contact);
-    }
+    @Input() inputChange;
+    emptyIt: boolean;
 
-    addInputContact(contact: string) {
-        this.addedContacts.push(contact);
+    constructor(private _toListService: ToListService) {}
+
+    addSelectedContact(contact: any) {
+        this._toListService.addContact(contact);
     }
 
 
