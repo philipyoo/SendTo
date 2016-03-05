@@ -7,8 +7,7 @@ import {ToListService} from './to-list.service';
     selector: 'add-hidden-contact',
     template: require('./add-hidden-contact.html'),
     directives: [ContactDetailComponent],
-    inputs: ['contacts', 'searchContact'],
-    providers: [ToListService]
+    inputs: ['contacts', 'searchContact']
 })
 
 export class AddHiddenContactComponent {

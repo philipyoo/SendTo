@@ -13,6 +13,9 @@ import {ToListService} from './to-list.service';
 
 export class EmailComponent {
     @Input() inputChange;
+    showingCc: boolean;
+    showingBcc: boolean;
+    
 
     constructor(private _toListService: ToListService) {}
 

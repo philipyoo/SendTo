@@ -1,6 +1,5 @@
 import {Injectable} from 'angular2/core';
 import {addedContacts} from './all-added-contacts';
-import {Contact} from '../contact/contact';
 
 @Injectable()
 export class ToListService {
