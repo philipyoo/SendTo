@@ -73,7 +73,7 @@ table {
 }
 
 input {
-  //border: none;
+  border: none;
 }
 
 input:focus {
@@ -90,10 +90,10 @@ span {
 }
 
 .search-contact {
-  background-color: white;
+  background-color: gray;
   position: absolute;
   width: 325px;
-  border: 1px solid gray;
+
 
   ul {
     margin: 0;
@@ -107,7 +107,7 @@ span {
 }
 
 li:hover {
-  background-color: grey;
+  background-color: #ccc;
 }
 
 .to-container {
@@ -150,11 +150,40 @@ li:hover {
 
     &:hover {
       color: white;
-      //background-color: black;
     }
   }
 }
 
-.token-button {
+.email-container {
+  padding: 0;
+  border: 1px solid gray;
+}
 
+.subject-line {
+  padding: 10px 5px;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+
+  input {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+  }
+}
+
+.body-content {
+  padding: 5px;
+  height: 100%;
+  vertical-align: top;
+
+  textarea {
+    resize: none;
+    width: 99%;
+    height: 50%;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
 }

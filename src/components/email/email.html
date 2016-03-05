@@ -23,9 +23,8 @@
                     </div>
                     <!--Hidden list of contacts-->
                     <div [hidden]="searchContact?.length <= 0" class="search-contact">
-                        <add-hidden-contact [searchContact]="searchContact" [contacts]="contacts"></add-hidden-contact>
-                        <!--<add-hidden-contact [contacts]="contacts"-->
-                                            <!--[searchContact]="searchContact"></add-hidden-contact>-->
+                        <add-hidden-contact [searchContact]="searchContact"
+                                            [contacts]="contacts"></add-hidden-contact>
                     </div>
                 </td>
             </tr>
@@ -34,7 +33,7 @@
                     <span class="email-label">From</span>
                 </td>
                 <td>
-                    <input type="text">
+                    <input type="text" value="{{from?.value || 'philip@gmail.com'}}" disabled>
                     <div class="carbon-copy">
                         <span>Cc</span> <span>Bcc</span>
                     </div>
@@ -42,5 +41,17 @@
             </tr>
         </div>
         </tbody>
+    </table>
+    <table style="height: 100%;">
+        <tr>
+            <td class="subject-line">
+                <input type="text" placeholder="  Subject">
+            </td>
+        </tr>
+        <tr>
+            <td class="body-content">
+                <textarea></textarea>
+            </td>
+        </tr>
     </table>
 </div>

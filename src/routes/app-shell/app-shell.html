@@ -8,14 +8,16 @@
                 <i class="material-icons">star</i>
             </span>
             <!-- Add spacer, to align navigation to the right -->
-            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-layout-spacer">
+                Email Account: <input type="text" (keyup)="0" #from>
+            </div>
         </div>
     </header>
 
     <main class="mdl-layout__content">
         <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--6-col mdl-cell--1-offset">
-                <email [contacts]="contacts"></email>
+                <email [style.border]="'1px solid red;'" [contacts]="contacts" [from]="from"></email>
             </div>
 
             <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset">
