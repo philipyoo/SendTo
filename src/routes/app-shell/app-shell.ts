@@ -12,7 +12,8 @@ import {ContactService} from '../../components/contact/contact.service';
     providers: [ContactService]
 })
 export class AppShell implements OnInit {
-    contacts: Contact[];
+    contacts: Array<Contact>;
+
     constructor(private _contactService: ContactService) { }
 
     getContacts() {

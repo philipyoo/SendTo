@@ -18,7 +18,7 @@
         <div class="body-container">
             <tr id="body-main">
                 <td class="something">
-                    <label >To</label>
+                    <label>To</label>
                 </td>
                 <td>
                     <!--Token & Input div-->
@@ -26,8 +26,8 @@
                         <add-contact (inputChange)="searchContact = $event.value"></add-contact>
                     </div>
                     <!--Hidden list of contacts-->
-                    <!--[hidden]="searchContact?.length <= 0"-->
-                    <div *ngIf="searchContact?.length > 0" class="search-contact">
+                    <!--*ngIf="searchContact?.length > 0"-->
+                    <div [hidden]="searchContact?.length <= 0" class="search-contact">
                         <add-hidden-contact [searchContact]="searchContact"
                                             [contacts]="contacts"></add-hidden-contact>
                     </div>

@@ -1,4 +1,4 @@
-import {Component, Input} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {AddContactComponent} from './add-contact';
 import {AddHiddenContactComponent} from './add-hidden-contact';
 import {ToListService} from './to-list.service';
@@ -12,12 +12,5 @@ import {ToListService} from './to-list.service';
 })
 
 export class EmailComponent {
-    @Input() inputChange;
-
-    constructor(private _toListService: ToListService) {}
-
-    addSelectedContact(contact: any) {
-        this._toListService.addContact(contact);
-    }
 }
 

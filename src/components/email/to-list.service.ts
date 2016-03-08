@@ -1,19 +1,18 @@
 import {Injectable} from 'angular2/core';
-import {addedContacts} from './all-added-contacts';
 
 @Injectable()
 export class ToListService {
+    _addedContacts: Array<any> = new Array();
+    
     getAddedContacts() {
-        return addedContacts;
+        return this._addedContacts;
     }
 
     addContact(contact: any) {
-        addedContacts.push(contact);
-        console.log(addedContacts);
+        this._addedContacts.push(contact);
     }
     
     removeContact(contact: any) {
-        addedContacts.splice(addedContacts.indexOf(contact), 1);
-        console.log(addedContacts);
+        this._addedContacts.splice(this._addedContacts.indexOf(contact), 1);
     }
 }
