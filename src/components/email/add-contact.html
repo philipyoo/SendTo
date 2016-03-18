@@ -5,8 +5,8 @@
 </div>
 <input type="text" #searchContact
        (keyup)="0"
-       (keyup.enter)="enterContact(searchContact.value); searchContact.value = ''"
-       [(ngModel)]="searchContact.value"
+       (keyup.enter)="enterContact(searchContact.value); inputChange.emit(''); searchContact.value=''"
+       [(ngModel)]="emptyInputField ? emptyOnClick() : searchContact.value"
        (ngModelChange)="inputChange.emit(searchContact)"
        >
 <!--<template *ngIf="emptyIt == true ? searchContact.value = '' : emptyIt = false;"></template>-->

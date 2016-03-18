@@ -1,4 +1,4 @@
-import {Component, Output, EventEmitter, OnInit} from 'angular2/core';
+import {Component, Input, Output, EventEmitter, OnInit} from 'angular2/core';
 import {CreateTokenComponent} from './create-token';
 import {ToListService} from './to-list.service';
 
@@ -6,11 +6,13 @@ import {ToListService} from './to-list.service';
     selector: 'add-contact',
     template: require('./add-contact.html'),
     directives: [CreateTokenComponent],
-    inputs: ['emptyIt']
+    inputs: ['emptyInputField']
 })
 export class AddContactComponent implements OnInit {
     allAddedContacts: Array<any>;
     @Output() inputChange = new EventEmitter<string>();
+    @Input() emptyInputField;
+    @Output() resetClickToggleBool = new EventEmitter<boolean>();
 
     constructor(private _toListService: ToListService) {}
 
@@ -20,5 +22,12 @@ export class AddContactComponent implements OnInit {
 
     ngOnInit() {
         this.allAddedContacts = this._toListService.getAddedContacts();
+    }
+
+    emptyOnClick() {
+      this.inputChange.emit('');
+      this.emptyInputField = false;
+      this.resetClickToggleBool.emit(this.emptyInputField);
+      return '';
     }
 }
