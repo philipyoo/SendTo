@@ -23,13 +23,15 @@
                 <td>
                     <!--Token & Input div-->
                     <div class="to-container">
-                        <add-contact (inputChange)="searchContact = $event.value"></add-contact>
+                        <add-contact (inputChange)="searchContact = $event.value" [emptyInputField]="emptyInputField"
+                        (resetClickToggleBool)="emptyInputField = $event.value"></add-contact>
                     </div>
                     <!--Hidden list of contacts-->
                     <!--*ngIf="searchContact?.length > 0"-->
                     <div [hidden]="searchContact?.length <= 0" class="search-contact">
                         <add-hidden-contact [searchContact]="searchContact"
-                                            [contacts]="contacts"></add-hidden-contact>
+                                            [contacts]="contacts"
+                                            (emptyInputField)="emptyInputField = $event"></add-hidden-contact>
                     </div>
                 </td>
             </tr>
